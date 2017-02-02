@@ -15,3 +15,4 @@ Skeleton of participants module
 - Jose Emilio Labra Gayo (@labra)
 - David Villamil Fernández (@davillafer)
 - Pablo Roncero Fernández (@ronce96)
+- Álvaro Suárez del Cueto (@varosuarez)
