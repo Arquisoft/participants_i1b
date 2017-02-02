@@ -5,6 +5,8 @@
 
 # participants0
 
+[![Join the chat at https://gitter.im/Arquisoft/participants_i1b](https://badges.gitter.im/Arquisoft/participants_i1b.svg)](https://gitter.im/Arquisoft/participants_i1b?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Join the chat at https://gitter.im/Arquisoft/participants0](https://badges.gitter.im/Arquisoft/participants0.svg)](https://gitter.im/Arquisoft/participants0?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Skeleton of participants module
@@ -13,4 +15,5 @@ Skeleton of participants module
 
 - Herminio García González (@herminiogg)
 - Jose Emilio Labra Gayo (@labra)
-
+- David Villamil Fernández (@davillafer)
+- Pablo Roncero Fernández (@ronce96)
