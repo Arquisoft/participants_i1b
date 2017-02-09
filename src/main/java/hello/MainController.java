@@ -8,16 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class MainController {
-    
-    @RequestMapping("/holaLuis")
-    public String hola(Model model) {
-    	model.addAttribute("nombre", "Luis");
+
+    @RequestMapping("/")
+    public String landing(Model model) {
+    	model.addAttribute("nombre", "Amigo");
         return "saludo";
     }
     
-    @RequestMapping("/")
-    public String pass(Model model) {
-        return "loggin";
+    @RequestMapping("/hola")
+    public String hola(Model model) {
+    	model.addAttribute("nombre", "Luis");
+        return "saludo";
     }
 
 }
