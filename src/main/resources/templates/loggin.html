@@ -116,7 +116,7 @@ body {
       <button>create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
-    <form class="login-form" action="#" th:action="@{/loggin}" th:object="${citizen}" method="post">
+    <form class="login-form" action="#" th:action="@{/info}" th:object="${citizen}" method="post">
       <input type="text" th:field="*{email}" placeholder="username"/>
       <input type="password" th:field="*{password}" placeholder="password"/>
       <button type="submit" value="Submit" >login</button>

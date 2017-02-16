@@ -2,6 +2,7 @@ package participants.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,14 +17,12 @@ public class GetParticipantInfoImpl implements GetParticipantInfo{
 	@Autowired
 	CitizenDao citizenDao;
 
-	@Override
-	@RequestMapping(value = "/citizen", 
-			method = RequestMethod.POST)
+	@PostMapping("/info")
 	public String getParticipantInfo(@RequestBody String email, @RequestBody String password) throws Exception {
 		System.out.println("!!!!!!!!--------------------------------------------------------------------------------------!!!!!!!!!!!");
 		Citizen user = citizenDao.findByEmail(email);
 		
-		if(user.equals(null))
+		if(user == null)
 			throw new Exception("User not found.");
 		
 		if(!user.getPassword().equals(password)){
