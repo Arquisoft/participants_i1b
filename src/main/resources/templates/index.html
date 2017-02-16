@@ -19,9 +19,9 @@
       <button>create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
-    <form class="login-form" action="#" th:action="@{/login}" th:object="${citizen}" method="post">
-      <input type="text" th:field="*{email}" placeholder="username"/>
-      <input type="password" th:field="*{password}" placeholder="password"/>
+    <form class="login-form" action="#" th:action="@{/login}" method="get">
+      <input type="text" name="login" placeholder="username"/>
+      <input type="password" name="password" placeholder="password"/>
       <button type="submit" value="Submit" >login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
