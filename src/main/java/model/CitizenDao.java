@@ -2,17 +2,43 @@ package model;
 
 import javax.transaction.Transactional;
 
-import org.springframework.data.repository.CrudRepository;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
+@Repository
 @Transactional
-public interface CitizenDao extends CrudRepository<Citizen, Long> {
+public class CitizenDao{
 
-  /**
-   * Return the user having the passed email as
-   * parameter, or null if no user is found.
-   * 
-   * @param email the user email.
-   */
-   public Citizen findByEmail(String email);
+	  @Autowired
+	  private SessionFactory session;
+	  
+	  private Session getSession() {
+	    return session.getCurrentSession();
+	  }
+
+	  public void save(Citizen citizen) {
+	    getSession().save(citizen);
+	  }
+	  
+	  public void delete(Citizen citizen) {
+	    getSession().delete(citizen);
+	  }
+	  
+	  public Citizen getById(long id) {
+		    return (Citizen) getSession().load(Citizen.class, id);
+	  }
+
+	  public void update(Citizen citizen) {
+	    getSession().update(citizen);
+	  }
+	  
+	  public Citizen findByEmail(String email) {
+		    return (Citizen) getSession().createQuery(
+		        "from User where email = :email")
+		        .setParameter("email", email)
+		        .uniqueResult();
+	  }
 
 }
