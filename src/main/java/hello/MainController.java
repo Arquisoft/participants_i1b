@@ -34,7 +34,7 @@ public class MainController {
     	return "info";
     }
     
-    @PostMapping("/info")
+    @PostMapping("/login")
     public String mostrarInfo(Model model){
     	return "info";
     }
