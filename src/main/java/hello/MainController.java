@@ -20,8 +20,7 @@ import model.CitizenDao;
 
 @Controller
 public class MainController {
-	
-	@Autowired
+
 	CitizenDao citizendao;
 	
     @RequestMapping("/")
@@ -36,8 +35,8 @@ public class MainController {
     	
     	//Citizen citizen = new Citizen(login, login, new Date(), login, login, login, login, 1);
     	try{
-    	Citizen citizen = citizendao.findByEmail(login);
-    	model.addAttribute("citizen",citizen);
+    	//Citizen citizen = citizendao.findByEmail(login);
+    	//model.addAttribute("citizen",citizen);
     	}
     	catch (Exception e){
     		

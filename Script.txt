@@ -1,12 +1,5 @@
-CREATE TABLE CITIZENS(
-	id INTEGER NOT NULL PRIMARY KEY,
-	firstName VARCHAR(45) NOT NULL ,
-	lastName VARCHAR(45) NOT NULL ,
-	birthday DATE NOT NULL ,
-	email VARCHAR(45) NOT NULL ,
-	nif VARCHAR(45) NOT NULL ,
-	address VARCHAR(45) NOT NULL ,
-	nationality VARCHAR(45) NOT NULL ,
-	pollingStationCode INTEGER NOT NULL ,
-	password VARCHAR(45) NOT NULL
-);
+INSERT INTO CITIZEN (id , firstName , lastName , birthday , email , nif , address , nationality , pollingStationCode, password )
+VALUES (1,test,test,199-01-01, test, 54325432L, test, test, 1, test)
+
+
+INSERT INTO `citizen` (`id`, `firstName`, `lastName`, `birthday`, `email`, `nif`, `address`, `nationality`, `pollingStationCode`, `password`) VALUES ('1', 'rew', 'rew', '1999-01-01', 'test', 'test', 'test', 'test', '2', 'test');
