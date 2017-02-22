@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Service
 public class CitizenController {
-  
+ 
   /**
    * /get-by-email  --> Return the id for the user having the passed email.
    * 

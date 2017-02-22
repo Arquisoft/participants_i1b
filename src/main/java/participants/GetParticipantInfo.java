@@ -1,6 +1,8 @@
 package participants;
 
+import model.Citizen;
+
 public interface GetParticipantInfo {
 
-	String getParticipantInfo(String email, String password) throws Exception;
+	public Citizen getParticipantInfo(String email, String password);
 }

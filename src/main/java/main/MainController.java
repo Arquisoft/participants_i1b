@@ -1,4 +1,4 @@
-package hello;
+package main;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +16,7 @@ import model.CitizenController;
 
 @Controller
 public class MainController {
+
 	@Autowired
 	CitizenController citizenController;
 	
@@ -26,6 +27,7 @@ public class MainController {
     
     @GetMapping(value = "/login", produces=MediaType.APPLICATION_JSON_VALUE)
     public String login(HttpServletRequest request, Model model){
+
     	String login = request.getParameter("login");
     	String password =  request.getParameter("password");
     	try{
@@ -35,7 +37,6 @@ public class MainController {
     		model.addAttribute("nombre", "Luis");
             return "saludo";
     	}
-    	//Citizen citizen = new Citizen(login, login, new Date(), login, login, login, login, 1);
     	
 
     	return "info";
