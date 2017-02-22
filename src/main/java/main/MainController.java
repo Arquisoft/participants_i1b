@@ -26,7 +26,7 @@ public class MainController {
         return "index";
     }
     
-    @GetMapping(value = "/login", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/login")
     public String login(HttpServletRequest request, Model model){
 
     	String login = request.getParameter("login");
@@ -41,7 +41,7 @@ public class MainController {
     	return "info";
     }
     
-    @PostMapping(value = "/info", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/info")
     public String mostrarInfo(@RequestBody Model model){
     	return "info";
     }
