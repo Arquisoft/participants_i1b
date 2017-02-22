@@ -1,11 +1,12 @@
 package model;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Repository
-public interface CitizenDao extends JpaRepository<Citizen, Long> {
-	
-	Citizen findByEmail(String email);
-}
+import javax.transaction.Transactional;
+
+import org.springframework.data.repository.CrudRepository;
+
+@Transactional
+public interface CitizenDao extends CrudRepository<Citizen, Long> {
+  
+	List<Citizen> findByEmail(String email);
+} 

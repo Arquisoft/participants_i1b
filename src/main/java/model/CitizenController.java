@@ -5,48 +5,34 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import model.Citizen;
-import model.CitizenDao;
-
+/**
+ * A class to test interactions with the MySQL database using the UserDao class.
+ *
+ * @author netgloo
+ */
 @Controller
 public class CitizenController {
-	
-   // Private fields
-   @Autowired
-   private CitizenDao userDao;
-   
-   /**
-    * Returns the user with the username passed
-    */
-   @RequestMapping("/get-by-email")
-   @ResponseBody
-   public Citizen getUserByEmail(String email) {
-	   Citizen user = null;
-     try {
-       user = userDao.findByEmail(email);    
-     }
-     catch (Exception ex) {
-       System.err.println("User" + userDao.findByEmail(email).getFirstName() 
-    		   + "not found");
-     }
-     return user;
-   }
-   
-   /**
-    * Updates user Password with the new requested one
-    */
-   @RequestMapping("/update")
-   @ResponseBody
-   public String updateUserPassword(String email,String newPassword) {
-     try {
-       Citizen user = this.getUserByEmail(email);
-       user.setPassword(newPassword);
-       userDao.save(user);
-     }
-     catch (Exception ex) {
-       return "Error updating the user: " + ex.toString();
-     }
-     return "User with email" + email + "succesfully updated";
-   }
-   
-}
+  
+  /**
+   * /get-by-email  --> Return the id for the user having the passed email.
+   * 
+   * @param email The email to search in the database.
+   * @return The user id or a message error if the user is not found.
+   */
+  @RequestMapping("/get-by-email")
+  @ResponseBody
+  public Citizen getByEmail(String email) {
+    Citizen user=null;
+    try {
+      user = citizenDao.findByEmail("email").get(0);
+    }
+    catch (Exception ex) {
+      ex.printStackTrace();
+    }
+    return user;
+  }
+  
+  @Autowired
+  private CitizenDao citizenDao;
+  
+} // class UserController
