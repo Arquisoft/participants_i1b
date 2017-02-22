@@ -1,18 +1,13 @@
 package hello;
 
 
-import java.util.Date;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import model.Citizen;
 import model.CitizenController;
@@ -21,6 +16,8 @@ import model.CitizenDao;
 @Controller
 public class MainController {
 
+	CitizenDao citizendao;
+	
     @RequestMapping("/")
     public String landing() {
         return "index";
@@ -33,6 +30,7 @@ public class MainController {
     	Citizen citizen = new CitizenController().getByEmail("email");
     	//Citizen citizen = new Citizen(login, login, new Date(), login, login, login, login, 1);
     	model.addAttribute("citizen",citizen);
+
     	return "info";
     }
     
