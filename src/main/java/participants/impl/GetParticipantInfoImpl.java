@@ -21,7 +21,7 @@ public class GetParticipantInfoImpl implements GetParticipantInfo{
 			method = RequestMethod.POST)
 	public Citizen getParticipantInfo(@RequestBody String email, @RequestBody String password) {
 		System.out.println("!!!!!!!!--------------------------------------------------------------------------------------!!!!!!!!!!!");
-		Citizen user = citizenDao.findByEmail(email);	
-		return user;
+
+		return null;
 	}
 }

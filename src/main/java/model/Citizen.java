@@ -6,10 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-<<<<<<< HEAD
 
-=======
->>>>>>> 507957171ab10e6d02cc8f16a2f7eb6b09b52088
 @Entity
 public class Citizen {
 	@Id
