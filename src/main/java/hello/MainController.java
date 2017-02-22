@@ -4,12 +4,12 @@ package hello;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import model.Citizen;
 import model.CitizenController;
@@ -24,7 +24,7 @@ public class MainController {
         return "index";
     }
     
-    @GetMapping("/login")
+    @GetMapping(value = "/login", produces=MediaType.APPLICATION_JSON_VALUE)
     public String login(HttpServletRequest request, Model model){
     	String login = request.getParameter("login");
     	String password =  request.getParameter("password");
@@ -41,7 +41,7 @@ public class MainController {
     	return "info";
     }
     
-    @PostMapping("/info")
+    @PostMapping(value = "/info", produces=MediaType.APPLICATION_JSON_VALUE)
     public String mostrarInfo(Model model){
     	return "info";
     }
