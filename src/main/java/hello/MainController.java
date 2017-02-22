@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import model.Citizen;
+import model.CitizenController;
+import model.CitizenDao;
 
 @Controller
 public class MainController {
@@ -26,15 +28,15 @@ public class MainController {
     
     @GetMapping("/login")
     public String login(HttpServletRequest request, Model model){
-    	String login = request.getParameter("login");
-    	String password =  request.getParameter("password");
-    	
-    	Citizen citizen = new Citizen(login, login, new Date(), login, login, login, login, 1);
+    	//String login = request.getParameter("login");
+    	//String password =  request.getParameter("password");
+    	Citizen citizen = new CitizenController().getByEmail("email");
+    	//Citizen citizen = new Citizen(login, login, new Date(), login, login, login, login, 1);
     	model.addAttribute("citizen",citizen);
     	return "info";
     }
     
-    @PostMapping("/login")
+    @PostMapping("/info")
     public String mostrarInfo(Model model){
     	return "info";
     }
