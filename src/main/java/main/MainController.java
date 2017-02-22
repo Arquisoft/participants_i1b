@@ -9,14 +9,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import model.Citizen;
 import model.CitizenController;
-import model.CitizenDao;
 
 @Controller
 public class MainController {
-	
+
 	@Autowired
 	CitizenController citizenController;
 	
@@ -27,11 +27,17 @@ public class MainController {
     
     @GetMapping("/login")
     public String login(HttpServletRequest request, Model model){
-    	//String login = request.getParameter("login");
-    	//String password =  request.getParameter("password");
-    	Citizen citizen = citizenController.getByEmail("email");
-    	//Citizen citizen = new Citizen(login, login, new Date(), login, login, login, login, 1);
+
+    	String login = request.getParameter("login");
+    	String password =  request.getParameter("password");
+    	try{
+    	Citizen citizen = citizenController.getParticipant(login, password);
     	model.addAttribute("citizen",citizen);
+    	}catch (Exception e){
+    		model.addAttribute("nombre", "Luis");
+            return "saludo";
+    	}
+    	
 
     	return "info";
     }
