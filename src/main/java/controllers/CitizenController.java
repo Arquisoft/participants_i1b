@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import model.Citizen;
 import repository.CitizenDao;
 @Service
-public class CitizenController {
+public class CitizenController { 
+  @Autowired
+  private CitizenDao citizenDao;
+  
+  
   @RequestMapping("/get-by-email")
   @ResponseBody
   public Citizen getParticipant(String email, String password) throws Exception {
@@ -23,9 +27,5 @@ public class CitizenController {
       throw new Exception("Problems Login user: " + user.toString());
     }
     return user;
-  }
-  
-  @Autowired
-  private CitizenDao citizenDao;
-  
+  } 
 } // class UserController

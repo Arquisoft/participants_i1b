@@ -1,5 +1,15 @@
-INSERT INTO CITIZEN (id , firstName , lastName , birthday , email , nif , address , nationality , pollingStationCode, password )
-VALUES (1,test,test,199-01-01, test, 54325432L, test, test, 1, test)
-
-
-INSERT INTO `citizen` (`id`, `firstName`, `lastName`, `birthday`, `email`, `nif`, `address`, `nationality`, `pollingStationCode`, `password`) VALUES ('1', 'Alvaro', 'Suarez', '1999-01-01', 'test', '71743114L', 'test', 'spanish', '1' ,'1234')
+CREATE TABLE CITIZEN(
+ 	id INTEGER NOT NULL PRIMARY KEY,
+ 	firstName VARCHAR(45) NOT NULL ,
+ 	lastName VARCHAR(45) NOT NULL ,
+ 	birthday DATE NOT NULL ,
+ 	email VARCHAR(45) NOT NULL ,
+ 	nif VARCHAR(45) NOT NULL ,
+ 	address VARCHAR(45) NOT NULL ,
+ 	nationality VARCHAR(45) NOT NULL ,
+ 	pollingStationCode INTEGER NOT NULL ,
+ 	password VARCHAR(45) NOT NULL
+ );
+INSERT INTO `citizen` (`id`, `firstName`, `lastName`, `birthday`, `email`, `nif`, `address`, `nationality`, `pollingStationCode`, `password`) VALUES ('1', 'Alvaro', 'Suarez', '1999-01-01', 'alvaro@hotmail.com', '71743114L', 'test', 'spanish', '1' ,'1234');
+INSERT INTO `citizen` (`id`, `firstName`, `lastName`, `birthday`, `email`, `nif`, `address`, `nationality`, `pollingStationCode`, `password`) VALUES ('2', 'David', 'Villamil', '1999-01-01', 'david@hotmail.com', '71743114L', 'test', 'spanish', '2' ,'12345');
+INSERT INTO `citizen` (`id`, `firstName`, `lastName`, `birthday`, `email`, `nif`, `address`, `nationality`, `pollingStationCode`, `password`) VALUES ('3', 'Pablo', 'Roncero', '1999-01-01', 'pablo@hotmail.com', '71743114L', 'test', 'spanish', '3' ,'123456');
