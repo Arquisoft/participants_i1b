@@ -4,10 +4,12 @@ package main;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import model.Citizen;
@@ -24,7 +26,7 @@ public class MainController {
         return "index";
     }
     
-    @GetMapping("/login")
+    @GetMapping(value = "/login", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
     public String login(HttpServletRequest request, Model model){
 
     	String login = request.getParameter("login");
@@ -39,8 +41,8 @@ public class MainController {
     	return "info";
     }
     
-    @PostMapping("/info")
-    public String mostrarInfo(Model model){
+    @PostMapping(value = "/info", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+    public String mostrarInfo(@RequestBody Model model){
     	return "info";
     }
     
