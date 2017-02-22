@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import model.Citizen;
 import model.CitizenController;
@@ -37,8 +36,6 @@ public class MainController {
     		model.addAttribute("nombre", "Luis");
             return "saludo";
     	}
-    	
-
     	return "info";
     }
     

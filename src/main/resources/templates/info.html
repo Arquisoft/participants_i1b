@@ -3,9 +3,12 @@
 <head>
     <title>Getting Started: Handling Form Submission</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+      <link rel="stylesheet" type="text/css" href="css/info.css"/>
+    
 </head>
 <body>
-	<table>
+	<table class = "table-fill">
       <tr>
         <td>Name:</td><td id="name"><span th:text="${citizen.firstName}"/></td>
       </tr>
@@ -21,22 +24,6 @@
       <tr>
         <td>Nationality:</td><td id="nationality"><span th:text="${citizen.nationality}"/></td>
       </tr>
-      <tr>
-        <td>Password:</td>
-        <td>
-          <input name="pass" type="password" placeholder="Password" />
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          <input name="repass" type="password" placeholder="Re-password" />
-        </td>
-        <td>
-          <input type="submit" method="post" value="Change" />
-        </td>
-      </tr>
     </table>
-    <a href="login">Cerrar sesión</a>
   </body>
 </html>
