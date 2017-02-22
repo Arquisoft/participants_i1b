@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import model.Citizen;
 
+import java.util.Date;
+
 @Controller
 public class MainController {
 
@@ -34,7 +36,8 @@ public class MainController {
 			model.addAttribute("citizen", citizen);
 			return "info";
 		} catch (Exception e) {
-			return "saludo";
+			model.addAttribute("citizen", new Citizen(" "," ",new Date(),login," "," "," ",5));
+			return "error";
 		}
 		
 	}

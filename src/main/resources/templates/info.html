@@ -13,7 +13,10 @@
         <td>Name:</td><td id="name"><span th:text="${citizen.firstName}"/></td>
       </tr>
       <tr>
-        <td>Email:</td><td id="surname"><span th:text="${citizen.getLastName()}"/></td>
+        <td>Surname:</td><td id="surname"><span th:text="${citizen.getLastName()}"/></td>
+      </tr>
+       <tr>
+        <td>Email:</td><td id="email"><span th:text="${citizen.email}"/></td>
       </tr>
       <tr>
         <td>Date of birth:</td><td id="birth"><span th:text="${citizen.birthday}"/></td>
