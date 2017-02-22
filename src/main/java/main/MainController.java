@@ -1,8 +1,9 @@
-package hello;
+package main;
 
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,9 @@ import model.CitizenDao;
 
 @Controller
 public class MainController {
-
-	CitizenDao citizendao;
+	
+	@Autowired
+	CitizenController citizenController;
 	
     @RequestMapping("/")
     public String landing() {
@@ -27,7 +29,7 @@ public class MainController {
     public String login(HttpServletRequest request, Model model){
     	//String login = request.getParameter("login");
     	//String password =  request.getParameter("password");
-    	Citizen citizen = new CitizenController().getByEmail("email");
+    	Citizen citizen = citizenController.getByEmail("email");
     	//Citizen citizen = new Citizen(login, login, new Date(), login, login, login, login, 1);
     	model.addAttribute("citizen",citizen);
 

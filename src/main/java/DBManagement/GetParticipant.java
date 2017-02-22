@@ -1,6 +1,6 @@
-package DBManagements;
+package DBManagement;
 
-import DBManagements.impl.GetParticipantImpl;
+import DBManagement.impl.GetParticipantImpl;
 
 public interface GetParticipant {
 

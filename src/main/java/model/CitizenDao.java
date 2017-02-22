@@ -8,5 +8,5 @@ import org.springframework.data.repository.CrudRepository;
 @Transactional
 public interface CitizenDao extends CrudRepository<Citizen, Long> {
   
-	List<Citizen> findByEmail(String email);
+	Citizen findByEmail(String email);
 } 
