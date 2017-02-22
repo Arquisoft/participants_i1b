@@ -1,4 +1,4 @@
-package participants.impl;
+/*package participants.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,9 +19,7 @@ public class GetParticipantInfoImpl implements GetParticipantInfo{
 	@Override
 	@RequestMapping(value = "/citizen", 
 			method = RequestMethod.POST)
-	public Citizen getParticipantInfo(@RequestBody String email, @RequestBody String password) {
-		System.out.println("!!!!!!!!--------------------------------------------------------------------------------------!!!!!!!!!!!");
-
+	public Citizen getParticipantInfo(@RequestBody String email, @RequestBody String password) {		
 		return null;
 	}
-}
+}*/
