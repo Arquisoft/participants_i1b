@@ -1,4 +1,4 @@
-package tests.webPages;
+/*package tests.webPages;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -72,4 +72,4 @@ public class NavigationTest {
 //		        .postForObject("http://localhost:" + port + "/login", requestLogin, String.class)
 //		        .contains("Error 404 user not found!"));
 	}
-}
+}*/
