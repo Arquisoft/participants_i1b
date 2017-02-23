@@ -36,7 +36,7 @@ public class CitizenTest {
 	
 	@Test
 	public void testToString() {
-	    Assert.assertEquals("Citizen [id=" + ct1.getId() + ", firstName=" + ct1.getFirstName() + ", lastName=" + ct1.getLastName() + /*", birthday=" + ct1.getBirthday()
+	   assertEquals("Citizen [id=" + ct1.getId() + ", firstName=" + ct1.getFirstName() + ", lastName=" + ct1.getLastName() + /*", birthday=" + ct1.getBirthday()
 				+ */", email=" + ct1.getEmail() + ", nif=" + ct1.getNif() + ", address=" + ct1.getAddress() + ", nationality=" + ct1.getNationality()
 				+ ", pollingStationCode=" + ct1.getpollingStationCode() + ", password=" + ct1.getPassword() + "]", ct1.toString());
 	}
