@@ -12,9 +12,9 @@ public class Citizen {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@Column(unique = true,nullable = false)
+	@Column(unique = true, nullable = false)
 	private String firstName;
-	@Column(unique = true,nullable = false)
+	@Column(unique = true, nullable = false)
 	private String lastName;
 	@Column(nullable = false)
 	private Date birthday;
@@ -30,18 +30,20 @@ public class Citizen {
 	private int pollingStationCode;
 	@Column(nullable = false)
 	private String password;
-	
-	public Citizen() {}
 
-	public Citizen(String firstName,String lastName,Date birthday, String email,String nif, String address,String nationality, int pollingStationCode) {
+	public Citizen() {
+	}
+
+	public Citizen(String firstName, String lastName, Date birthday, String email, String nif, String address,
+			String nationality, int pollingStationCode) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.birthday=birthday;
+		this.birthday = birthday;
 		this.email = email;
 		this.nif = nif;
-		this.address=address;
-		this.nationality=nationality;
-		this.pollingStationCode=pollingStationCode;
+		this.address = address;
+		this.nationality = nationality;
+		this.pollingStationCode = pollingStationCode;
 	}
 
 	public String getPassword() {
@@ -157,16 +159,17 @@ public class Citizen {
 		if (password == null) {
 			if (other.password != null)
 				return false;
-		} else if (!password.equals(other.password))
+		} else if (!password.equals(other.password)) {
 			return false;
-		if (pollingStationCode != other.pollingStationCode)
+		} else if (pollingStationCode != other.pollingStationCode)
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Citizen [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName /*+ ", birthday=" + birthday*/
+		return "Citizen [id=" + id + ", firstName=" + firstName + ", lastName="
+				+ lastName /* + ", birthday=" + birthday */
 				+ ", email=" + email + ", nif=" + nif + ", address=" + address + ", nationality=" + nationality
 				+ ", pollingStationCode=" + pollingStationCode + ", password=" + password + "]";
 	}
