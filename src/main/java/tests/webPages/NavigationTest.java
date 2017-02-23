@@ -1,4 +1,5 @@
 package tests.webPages;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
