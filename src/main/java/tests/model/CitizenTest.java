@@ -3,7 +3,6 @@ package tests.model;
 import static org.junit.Assert.*;
 
 import java.util.Date;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +18,6 @@ public class CitizenTest {
 		ct1 = new Citizen("userTest", "asw99", new Date(1981,12,01,00,00) , "userTest@mail.com", "1681U", "calle pos", "GER", 120);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Test
 	public void basicMethodsTest() {
 		assertEquals( ct1.getFirstName()			,"userTest");

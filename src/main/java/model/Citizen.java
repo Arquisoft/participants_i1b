@@ -31,9 +31,8 @@ public class Citizen {
 	@Column(nullable = false)
 	private String password;
 
-	public Citizen() {
-	}
-
+	public Citizen(){}
+	
 	public Citizen(String firstName, String lastName, Date birthday, String email, String nif, String address,
 			String nationality, int pollingStationCode) {
 		this.firstName = firstName;
