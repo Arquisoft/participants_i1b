@@ -15,17 +15,9 @@ public class CitizenController {
   
   @RequestMapping("/get-by-email")
   @ResponseBody
-  public Citizen getParticipant(String email, String password) throws Exception {
+  public Citizen getParticipant(String email, String password){
     Citizen user= new Citizen();
-    try {
-      user = citizenDao.findByEmailAndPassword(email, password);
-      if(user==null){
-    	  throw new NullPointerException("User Not Found");
-      }
-    }
-    catch (Exception ex) {
-      throw new Exception("Problems Login user: " + user.toString());
-    }
+    user = citizenDao.findByEmailAndPassword(email, password);
     return user;
   } 
 } // class UserController
