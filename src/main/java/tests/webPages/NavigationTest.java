@@ -24,7 +24,7 @@ import model.Citizen;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-public class NavigationTest2 {
+public class NavigationTest {
 
 	private WebEnvironment port = WebEnvironment.RANDOM_PORT;
 	private TestRestTemplate rt;
