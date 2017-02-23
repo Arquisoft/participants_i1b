@@ -166,7 +166,7 @@ public class Citizen {
 
 	@Override
 	public String toString() {
-		return "Citizen [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", birthday=" + birthday
+		return "Citizen [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName /*+ ", birthday=" + birthday*/
 				+ ", email=" + email + ", nif=" + nif + ", address=" + address + ", nationality=" + nationality
 				+ ", pollingStationCode=" + pollingStationCode + ", password=" + password + "]";
 	}
