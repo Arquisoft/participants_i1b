@@ -19,7 +19,7 @@ import java.util.Date;
 public class MainController {
 
 	@Autowired
-	CitizenController citizenController;
+	private CitizenController citizenController;
 
 	@RequestMapping("/")
 	public String landing() {
